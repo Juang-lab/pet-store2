@@ -7,11 +7,11 @@
    $email = $_POST['e_mail'];
    $passw = $_POST['p_assw'];
 
-// ENCRIPTAR CONTRASEÑA
-  // $hashed_password = password_hash($passw, PASSWORD_DEFAULT);
-  $hashed_password = $passw;
-
-  
+   
+// INCRIPTAR CONTRASEÑA
+   //$hashed_password = password_hash($passw, PASSWORD_DEFAULT);
+   $hashed_password = $passw;
+    
    $sql_validate_email ="
       select 
           COUNT(id) as total
@@ -41,7 +41,7 @@
           if($ans){
           //echo "User has been created seccessfeully";
           echo "<script>alert('User has created. Go to login')</script>";
-          header('Refresh:0;URL=http://localhost/pet-store/src/signin.html');
+          header('Refresh:0;URL=http://localhost/pet-store2/src/login.html');
        }else{
            echo "Error";
          }
